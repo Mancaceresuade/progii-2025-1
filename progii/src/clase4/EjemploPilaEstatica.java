@@ -16,6 +16,7 @@ class Pila<T> {
     private T[] elementos;
     private int contador = 0;
 
+    @SuppressWarnings("unchecked")
     public Pila(int capacidad) {
         elementos = (T[]) new Object[capacidad];
     }

@@ -1,6 +1,6 @@
 package clase4;
 
-public class App {
+public class EjemploLista {
     public static void main(String[] args) {
         Lista<String> palabras = new Lista<>(10);
         palabras.agregar("Hola");
@@ -9,10 +9,10 @@ public class App {
         palabras.imprimirLista();
 
         ListaDinamica<String> palabrasDinamica = new ListaDinamica<>();
-        palabras.agregar("Hola");
-        palabras.agregar("Mundo");
-        palabras.agregar("Java");
-        palabras.imprimirLista();
+        palabrasDinamica.agregar("Hola");
+        palabrasDinamica.agregar("Mundo");
+        palabrasDinamica.agregar("Java");
+        palabrasDinamica.imprimirLista();
 
 
     }
