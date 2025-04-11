@@ -1,6 +1,19 @@
+
 public class App {
 
+    //
+    // Ejercicio dada una matriz, 
+    // calcular la suma de todos los numeros 
+    // multiplos 5
+    // 
+
+
     public static void main(String[] args) {
+        //Nota<Integer> nota = new Nota<>();
+        //nota.imprimirNota(8);
+        Nota<String> nota = new Nota<>();
+        nota.imprimirNota("Alcanzó los objetivos de aprendizaje");
+        /*
         int[] arr = {1, 2, 3, 4, 5};
         System.out.println(sumaNumeros(arr));
         int[][] matriz = {
@@ -9,6 +22,7 @@ public class App {
             {7, 8, 9}
         };
         System.out.println(sumaMatriz(matriz));
+         */
     }
 
     private static int sumaMatriz(int[][] matriz) {
