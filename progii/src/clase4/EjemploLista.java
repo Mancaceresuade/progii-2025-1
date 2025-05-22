@@ -1,8 +1,30 @@
 package clase4;
 
+import java.util.ArrayList;
+
 public class EjemploLista {
     public static void main(String[] args) {
+
+        ArrayList<String> lista = new ArrayList<>();
+        lista.add("Hola");
+        lista.add("Mundo");
+        lista.add("Java");
+        for (String elemento : lista) {
+            if(elemento.equals("Mundo")) {
+                lista.remove(elemento);
+            }
+        }
+        
+        // LinkedList<String> lista2 = new LinkedList<>();
+
+        /*
         Lista<String> palabras = new Lista<>(10);
+        palabras.insertar(0, "8");
+        palabras.insertar(1, "10");
+        palabras.insertar(0, "4");
+        palabras.imprimirLista();
+        */
+        /*
         palabras.agregar("Hola");
         palabras.agregar("Mundo");
         palabras.agregar("Java");
@@ -13,7 +35,7 @@ public class EjemploLista {
         palabrasDinamica.agregar("Mundo");
         palabrasDinamica.agregar("Java");
         palabrasDinamica.imprimirLista();
-
+        */
 
     }
     
@@ -23,16 +45,17 @@ class Lista<T> {
     private T[] elementos;
     private int contador = 0;
 
+    @SuppressWarnings("unchecked")
     public Lista(int capacidad) {
         elementos = (T[]) new Object[capacidad];
     }
 
     public void insertar(int pos, T elemento) {
-        for (int i = contador; i > pos; i--) {
+        for (int i = contador; i > pos; i--) { // 1 
             elementos[i] = elementos[i - 1];
         }
-        elementos[pos] = elemento;
-        contador++;
+        elementos[pos] = elemento; // 1
+        contador++; // 1
     }
 
     public void agregar(T elemento) {
@@ -52,7 +75,7 @@ class Lista<T> {
 }
 
 
-class ListaDinamica<T> {
+class ListaDinamica<T> {  // linked list
 
     private Nodo<T> primero;
     private Nodo<T> ultimo;

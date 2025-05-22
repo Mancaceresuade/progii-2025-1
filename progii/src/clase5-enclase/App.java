@@ -9,10 +9,18 @@ public class App {
 
 
     public static void main(String[] args) {
+        int[][] matriz = {
+            {1, 2, 3,5},
+            {4, 5, 6,8},
+            {7, 8, 9,4}
+        };
+        System.out.println(matriz.length);
+        System.out.println(matriz[0].length);
+
         //Nota<Integer> nota = new Nota<>();
         //nota.imprimirNota(8);
-        Nota<String> nota = new Nota<>();
-        nota.imprimirNota("Alcanzó los objetivos de aprendizaje");
+        //Nota<String> nota = new Nota<>();
+        //nota.imprimirNota("Alcanzó los objetivos de aprendizaje");
         /*
         int[] arr = {1, 2, 3, 4, 5};
         System.out.println(sumaNumeros(arr));
@@ -25,6 +33,7 @@ public class App {
          */
     }
 
+    /*
     private static int sumaMatriz(int[][] matriz) {
         int suma = 0; // 1
         for (int i = 0; i < matriz.length; i++) { // 1  n 2n
@@ -32,6 +41,7 @@ public class App {
         }
         return suma; //1
     }
+    */    
     // complejidad supuniendo que la matriz es cuadrada n x n
     // f(n) = 1 + 1 + 2n + 2n + n * h(n) + 1
     // f(n) = 3 + 4n + n * (4n+3)
@@ -51,6 +61,7 @@ public class App {
     // n = 8  => 7*8 + 3 <= 8^2 => 56 + 3 <= 64 (se cumple)
     // f(n) pertenece a O(n^2) para n >= 8 y c = 5
 
+    /*
     private static int sumaFila(int[] fila) {
         int suma = 0; // 1
         for (int i = 0; i < fila.length; i++) { // 1  n 2n
@@ -58,7 +69,8 @@ public class App {
         }
         return suma; //1
     } // 1 2n + 1 + 2n + 1 = 4n + 3 = h(n) 
-
+    */
+    /*
     private static int sumaNumeros(int[] arr) {
         int suma = 0; // 1
         for (int i = 0; i < arr.length; i++) { // 1  2n 2n
@@ -66,5 +78,5 @@ public class App {
         }
         return suma; //1
     } // 1 2n + 1 + 2n + 1 = 4n + 3 = f(n) => O(n)
-
+     */
 }

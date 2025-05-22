@@ -19,6 +19,7 @@ public class App {
 class Conjunto<T> {
     T[] elementos;
     int tam;
+    @SuppressWarnings("unchecked")
     Conjunto(int tam) {
         this.tam = tam;
         elementos = (T[]) new Object[tam];        
